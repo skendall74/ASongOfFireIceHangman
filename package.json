@@ -1,0 +1,23 @@
+{
+  "name": "advancedjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skendall74/advancedJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skendall74/advancedJS/issues"
+  },
+  "homepage": "https://github.com/skendall74/advancedJS#readme",
+  "dependencies": {
+    "inquirer": "^6.2.2",
+    "prompt": "^1.0.0"
+  }
+}
