@@ -1,23 +1,24 @@
-var Letter = require("./letter.js");
+var Letter = require('./Letter');
 
-
-function Word(answer) {
-    this.objArray = [];
-    for (var i = 0; i < anwser.length; i++); {
-        var letter = new letter(answer[i]);
-        this.objArray.push(letter);
-    }
-    this.log = function (answerLog) {
-        answerLog = " ";
-        for (var i = 0; i < this.objArray.length; i++) {
-            answerLog += this.objArray[i] = " ";
+function Word(word) {
+    this.lettersObj = [];
+    this.songOfFireIce = function () {
+        for (i = 0; i < word.length; i++) {
+            this.lettersObj.push((new Letter(word.charAt(i))));
         }
-        console.log(answerLog + '\n');
-    }
-    this.userGuess = function (input) {
-        for (var i = 0; i < this.objArray.length; i++) {
-            this.objArray[i].guess(input);
+    };
+    this.createString = function () {
+        var string = "";
+        for (var i in this.lettersObj) {
+            string = string.concat(this.lettersObj[i].guessedLetter());
         }
-    }
+        return string;
+    };
+    this.checkLetter = function (char) {
+        for (var i in this.lettersObj) {
+            (this.lettersObj[i].letterGuessed(char));
+        }
+    };
 }
+
 module.exports = Word;
